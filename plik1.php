@@ -2,57 +2,53 @@
 <html lang="pl" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>zmienne</title>
+    <title>Zmienne</title>
   </head>
   <body>
     <?php
-    $name = 'Anna';
-    $surname = 'Nowak';
-    echo 'Imię: $name<br>';
-    echo "Imię: $name<br>";
-    //konkatenacja .
-    echo "Imię: $name<br>"."nazwisko: $surname<br>";
-    echo 'text<br>';
-    //TYPY DANYCH
-    //boolean
-    $prawda = true;
-    $falsz = flase;
-    echo $prawda;
-    echo $falsz;
-    echo "<br>";
-    //nie stosowac polskich znakow
-    $bin = 0b1011;
-    $dec = 11;
-    $oct = 011;
-    $hex = 0x11;
-    echo "<br>$bin<br>";
-    echo "<br>$dec<br>";
-    echo "<br>$oct<br>";
-    echo "<br>$hex<br>";
-    $name='Janusz';
-    //skaldnia heredoc
-    $text = <<<LABEL
-    <hr>
-    heredoc
-    <hr>
-  LABEL;
+      $name='Anna';
+      echo 'Imię: $name<br>';
+      // konkatenacja .
+      echo "Imię: $name"."<hr>";
 
-    echo $text;
-    echo <<<L
-      heredoc
-      Imię: $surname
-      <hr>
-    L;
-    //skladnia nowdoc
-    echo <<<'L'
-    Nowdoc<br>
-    Imię: $name
-    <hr>
-    L;
-    $city="Poznan";
-    echo "nazwa zmiennej: \$city, wartosc: $city";
+      // typy danych
+      // boolean
+      $prawda = true;
+      $fałsz = false;
 
+      echo $prawda; // 1
+      echo $fałsz; // brak wyświetlenia
 
-    ?>
+      // typ integer
+      $calkowita = 10; // 10
+      $hex = 0xB; // 11
+      $oct = 010; // 8
+      $bin = 0b1011; // 11
+
+      echo "<hr>$bin";
+
+// składnia heredoc
+  $name = 'Janusz';
+  $text =<<< ETYKIETA
+    <hr>Imię w heredoc: $name<br>
+    Druga linia heredoc<hr>
+ETYKIETA;
+
+  echo $text;
+
+  echo <<< E
+    Heredoc v2<hr>
+E;
+
+// składnia nowdoc
+  $city = 'Poznań';
+
+  echo <<< 'E'
+  Miasto: $city<hr>
+E;
+
+echo "Nazwa zmiennej: \$city, wartość: $city";
+
+     ?>
   </body>
 </html>

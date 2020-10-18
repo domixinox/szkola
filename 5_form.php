@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h3>Dane usera</h3>
-    <form method="get">
-      <input type="text" name="surname"><br><br>
-      <input type="submit" name="Zatwierdz"><br><br>
-    </form>
-    <?php
-      if(!empty($_GET('surname'))){
-        if(strlen(trim($_get('suranme')))!=0){
-          $surname = $_GET('surname');
-          echo $surname;
-        }else{
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms</title>
+    </head>
+    <body>
 
-        }
+        <form action="" method="get" id="f1">
+            <input type="text" name="surname">
+            <input type="submit" value="submit" name="bttn">
+        </form>
 
-      }
-     ?>
-  </body>
+            <?php
+                if(!empty($_GET['surname'])){
+                    if(strlen(trim($_GET['surname'])) != 0){
+                        echo "Surname: ", $_GET['surname'];
+                    }else{
+                        echo "Ya moron";
+                    }
+                }
+
+            ?>
+        
+    </body>
 </html>

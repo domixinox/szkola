@@ -3,25 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Forms</title>
+        <title>Formularze</title>
     </head>
     <body>
 
-        <form action="" method="get" id="f1">
-            <input type="text" name="surname">
-            <input type="submit" value="submit" name="bttn">
-        </form>
+    <label for="formik">Dane użytkownika</label>
+    <form method="get" id="formik">
+        <input type="text" name = "surname">
+        <input type="submit" value="Zatwierdź" name = "bttn">
+    </form>
 
-            <?php
-                if(!empty($_GET['surname'])){
-                    if(strlen(trim($_GET['surname'])) != 0){
-                        echo "Surname: ", $_GET['surname'];
-                    }else{
-                        echo "Ya moron";
-                    }
-                }
-
-            ?>
+        <?php
+        //isset()
+        if(!empty($_GET['surname'])){
+            if(strlen(trim($_GET['surname'])) != 0){
+                echo "Nazwisko: " , $_GET['surname'];
+            }else{
+                echo "Bez spacji..";
+            }
+        }
+        ?>
         
     </body>
 </html>

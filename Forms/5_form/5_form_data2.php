@@ -15,7 +15,7 @@
                 print_r($_GET);
                 echo "</pre>";
 
-                $name = $_GET['name'];
+                $city = $_GET[city'];
 
                 if (!empty($_GET['city'])){   
                         echo <<<L

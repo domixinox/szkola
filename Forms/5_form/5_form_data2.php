@@ -15,9 +15,9 @@
                 print_r($_GET);
                 echo "</pre>";
 
-                $city = $_GET[city'];
+                $city = $_GET['city'];
 
-                if (!empty($_GET['city'])){   
+                if (!empty($_GET['city'])){
                         echo <<<L
                             City: $city<br>
                         L;
@@ -34,6 +34,6 @@
                 }
 
             ?>
-        
+
     </body>
 </html>
